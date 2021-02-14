@@ -220,7 +220,7 @@ a[href*="mail"] {
     font-family: $primaryFont;
     font-size: 2.2rem;
 
-    transition: all 0.2s;
+    @include transition;
 }
 
 address a {
@@ -233,7 +233,7 @@ address a {
     line-height: 2.7rem;
     letter-spacing: 1px;
 
-    transition: all 0.2s;
+    @include transition;
 }
 
 address a[href*="tel"]:hover,

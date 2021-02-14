@@ -58,25 +58,6 @@
     transform: rotate(-45deg) translate(2px, -3px);
 }
 
-.nav-links {
-        position: absolute;
-        z-index:-1;
-        right: 0px;
-        top: 0px;
-        height: 100vh;
-        width: 100vw;
-        background-color: $darkBackground;
-        opacity: 98%;
-        flex-direction: column;
-        transform: translateY(-100%);
-        @include transition;
-    }
-
-//add this class on toggle with JS function
-.nav-open {
-    transform: translateY(0%); 
-    z-index: 10;
-}
 
 //animation for navigation links to come in
 @keyframes navLinkFade {
