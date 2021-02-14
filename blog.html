@@ -106,22 +106,20 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet earum doloremque ducimus dolor illo mollitia ullam hic tempora debitis perferendis facere, iusto natus quod cupiditate aliquam explicabo voluptatibus eius!</p>
                     </div><!--/.comment-text-->
                 </article><!--/.posted-comments-->
-                <form action="">
-                    <fieldset>
+                <form name ="commentSubmit" action="">
                         <legend class="sr-only">Post your comment</legend>
-                        <div class="flex-form">
-                            <label for="user-name" class="sr-only">Enter your name</label>
-                            <input type="text" id="user-name" name="user-name" placeholder="Name">
+                        <div class="flexForm">
+                            <label for="useName" class="sr-only">Enter your name</label>
+                            <input type="text" id="userName" name="userName" placeholder="Name">
                             
-                            <label for="user-email" class="sr-only">Enter your email</label>
-                            <input type="email" id="user-email" name="user-email" placeholder="Email address">
+                            <label for="userEmail" class="sr-only">Enter your email</label>
+                            <input type="email" id="userEmail" name="userEmail" placeholder="Email address">
                         </div><!--/.flex-form-->
     
-                        <label for="user-comment" class="sr-only">Enter your comment</label>
-                        <textarea name="user-comment" id="user-comment" placeholder="Comment"></textarea>
+                        <label for="userComment" class="sr-only">Enter your comment</label>
+                        <textarea name="userComment" id="userComment" placeholder="Comment"></textarea>
                         
-                        <button type="submit" class="submit-button">Post comment</button>
-                    </fieldset>
+                        <button type="submit" class="submitButton">Post comment</button>
                 </form>
             </section><!--/.blog-comments-->
         </section><!--/.blog-->
@@ -135,5 +133,6 @@
     </footer>
     <!--footer ends here-->
     <script src="./js/main.js"></script>
+    <script src="./js/blog.js"></script>
 </body>
 </html>

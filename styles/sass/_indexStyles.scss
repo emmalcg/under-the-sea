@@ -125,11 +125,11 @@
 }
 
 .new-additions img {
-    box-shadow: 45px 45px $lightShadow;
+    box-shadow: 2.2vw 2.2vw $lightShadow;
 }
 
 .new-feature img {
-    box-shadow: -45px 45px $lightShadow;
+    box-shadow: -2.2vw 2.2vw $lightShadow;
 }
 
 .read-more {
@@ -186,7 +186,7 @@
     color: $darkBackground;
     background-color: $lightShadow;
 
-    transition: all 0.4s;
+    @include transition;
 }
 
 .hover-state:hover .fas,
@@ -205,7 +205,7 @@
     font-size: 2.5rem;
     letter-spacing: 1px;
 
-    transition: all 0.4s;
+    @include transition;
 }
 
 .page-directory a p {
@@ -232,14 +232,8 @@
     padding-bottom: 100px;
 }
 
-.monthly-profile .image-container {
-    width: auto;
-    max-width: 275px;
-    max-height: auto;
-}
-
 .monthly-profile img {
-    box-shadow: 35px 35px $lightShadow;
+    box-shadow: 2.2vw 2.2vw $lightShadow;
 }
 
 .monthly-profile .text-content {

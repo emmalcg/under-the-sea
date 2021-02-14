@@ -70,23 +70,21 @@
                     <a href="https://goo.gl/maps/rytsjyNdKN2MML6x7">123 Queen Street West, Unit 10</br>Toronto, Ontario</br>M5V2D5</a>
                 </address>
             </section><!--/.contact-info-->
-            <form action="">
+            <form name="contactSubmit" action="">
                 <fieldset>
                     <legend class="sr-only">Contact us</legend>
-                    <div class="flex-form">
-                        <label for="user-name" class="sr-only">Enter your name</label>
-                        <input type="text" id="user-name" name="user-name" placeholder="Name">
+                    <div class="flexForm">
+                        <label for="userName" class="sr-only">Enter your name</label>
+                        <input type="text" id="userName" name="userName" placeholder="Name">
                 
-                        <label for="user-email" class="sr-only">Enter your email</label>
-                        <input type="email" id="user-email" name="user-email" placeholder="Email address">
+                        <label for="userEmail" class="sr-only">Enter your email</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="Email address">
                     </div><!--/.flex-form-->
 
-                    <div class="flex-form">
-                        <label for="user-message" class="sr-only">Enter your message</label>
-                        <textarea name="user-message" id="user-message"  placeholder="Message"></textarea>
-                    </div><!--/flex-form-->
+                    <label for="userMessage" class="sr-only">Enter your message</label>
+                    <textarea name="userMessage" id="userMessage"  placeholder="Message"></textarea>
 
-                    <button type="submit" class="submit-button">Submit</button>
+                    <button type="submit" class="submitButton">Submit</button>
                 </fieldset>
             </form>
         </div><!--/.wrapper .contact-page-->
@@ -101,5 +99,6 @@
     <!--footer ends here-->
     
     <script src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 </html>

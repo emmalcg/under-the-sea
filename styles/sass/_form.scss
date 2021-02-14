@@ -2,9 +2,10 @@ fieldset {
     border: none;
 }
 
-.flex-form {
+.flexForm {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 input, 
@@ -24,14 +25,10 @@ input {
     border-top: 2px solid transparent;
     border-right: 2px solid transparent;
     border-left: 2px solid transparent;
-
+    width: 45%;
     color: $textColor;
 
     @include transition;
-}
-
-input[type="text"] {
-    margin-right: 40px;
 }
 
 input:hover,
@@ -46,7 +43,7 @@ input:focus {
 textarea {
     width: 100%;
     height: 200px;
-    margin: 40px 0 0 0;
+    margin: 40px 0 20px;
 
     color: $textColor;
 
@@ -65,9 +62,9 @@ textarea:focus {
     opacity: 1;
 }
 
-.submit-button {
+.submitButton {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 15px 0;
     border: 2px solid transparent;
 
@@ -78,12 +75,16 @@ textarea:focus {
     @include transition;
 }
 
-.submit-button:hover,
-.submit-button:focus {
+.submitButton:hover,
+.submitButton:focus {
     background-color: $lightShadow;
     color: $darkBackground;
 
     border: 2px solid $textColor;
+}
+
+.thankMsg {
+    text-align: center;
 }
 
 //contact form
@@ -94,7 +95,7 @@ textarea:focus {
     padding: 60px 45px 45px 45px;
 
     background-color: $lightBackground;
-    box-shadow: -2.5vw 2.5vw $lightShadow;
+    box-shadow: -2.2vw 2.2vw $lightShadow;
 
     position: relative;
     top: -220px;
@@ -106,15 +107,15 @@ textarea:focus {
     background-color: $lightBackground;
 }
 
-.contact-page input[type="text"] {
-    width: 45%;
-    margin-right: 5%;
-}
+// .contact-page input[type="text"] {
+//     width: 45%;
+//     margin-right: 5%;
+// }
 
-.contact-page input[type="email"] {
-    width: 45%;
-    margin-left: 5%;
-}
+// .contact-page input[type="email"] {
+//     width: 45%;
+//     margin-left: 5%;
+// }
 
 .contact-page textarea {
     width: 100%;
@@ -129,7 +130,5 @@ textarea:focus {
 }
 
 .contact-page button {
-    margin-top: 50px;
-    padding: 10px;
     background-color: $darkBackground;
 }
