@@ -23,27 +23,43 @@
 //second minor breakpoint
 @media (max-width: 1025px) {
     //index page breakpoint styles
+    .index-header {
+        height: 80vh;
+    }
+
     .about {
         padding: 115px 60px 115px;
     }
-    .about p {
-        text-align: center;
-    }
+    
     .container {
         height: 570px;
         justify-content: space-between;
         padding: 25px 0;
     }
+
     .container .text-content {
         width: 55%;
     }
+
     .container .text-content p {
         margin: 12px 0 20px;
     }
+
     .new-additions .image-container,
     .new-feature .image-container {
         position: static;
         width: 35%;
+    }
+
+    .monthly-profile img {
+        box-shadow: 2vw 2vw $lightShadow;
+    }
+
+    //blog page breakpoint styles
+    .blog-post,
+    .blog-comments {
+        padding-right: 0;
+        margin-right: 60px;
     }
 }
 //first major breakpoint
@@ -66,12 +82,6 @@
     .monthly-profile .wrapper {
         padding: 60px 0 60px;
     }
-    .monthly-profile img {
-        box-shadow: 2vw 2vw $lightShadow;
-    }
-    .monthly-profile .text-content {
-        text-align: center;
-    }
     //blog page breakpoint styles
     .blog-header h1 {
         margin-right: 0;
@@ -81,35 +91,41 @@
     }
     aside {
         flex-direction: row;
+        justify-content: space-between;
         width: 90%;
         margin: 0 auto;
         margin-top: 20px;
         padding: 20px;
+        background: rgba(15, 97, 78, 0.3);
     }
-    .aside-about {
-        width: 60%;
-        margin: auto;
-        text-align: center;
+    .aside-image {
+        display: none;
     }
-    aside .aside-image {
-        position: static;
+    .aside-about,
+    .aside-posts {
         width: 50%;
         margin: 0 auto;
-        margin-bottom: 20px;
-    }
-    .aside-about p {
-        padding: 0;
     }
     .aside-posts {
-        width: 40%;
+        width: 35%;
     }
-    .aside-posts h3 {
-        text-align: center;
+    .aside-posts li {
+        line-height: 1.4rem;
     }
+
+    .aside-about p {
+        padding: 0;
+        line-height: 2.2rem;
+    }
+    .aside-posts li:first-child {
+        padding-top: 0;
+    }
+    
     .blog{
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
+
     .blog-post,
     .blog-comments {
         margin: 0;
@@ -150,10 +166,10 @@
 }
 //third minor breakpoint
 @media (max-width: 700px) {
-    //index page breakpoint styles
-    .index-header {
-        height: 70vh;
+    .wrapper {
+        max-width: 95%;
     }
+    //index page breakpoint styles
     .index-header h1 {
         position: relative;
         z-index: 1;
@@ -171,9 +187,7 @@
     aside {
         padding: 10px;
     }
-    .aside-image {
-        display: none;
-    }
+
     .aside-about {
         width: 45%;
         margin: 0 auto 0 0;
@@ -184,6 +198,16 @@
 }
 //second major breakpoint
 @media (max-width: 600px) {
+    //na
+    .nav-links li {
+        margin: 25px auto;
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
     //index page breakpoint styles
     .index-header {
         height: 50vh;
@@ -306,21 +330,6 @@
     .index-header h1 {
         max-width: 80%;
     }
-    //mainNavigation breakpoint styles
-    .main-nav {
-        text-align: right;
-    }
-    .main-nav li {
-        display: none;
-    }
-    .main-nav .nav-toggle {
-        display: inline-block;
-    }
-    .main-nav .fas {
-        color: $textColor;
-        font-size: 4rem;
-    }
-    //blog page breakpoint styles
     aside {
         flex-direction: column;
     }

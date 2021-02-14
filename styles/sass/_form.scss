@@ -27,7 +27,7 @@ input {
 
     color: $textColor;
 
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 input[type="text"] {
@@ -50,7 +50,7 @@ textarea {
 
     color: $textColor;
 
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 textarea:hover,
@@ -82,6 +82,8 @@ textarea:focus {
 .submit-button:focus {
     background-color: $lightShadow;
     color: $darkBackground;
+
+    border: 2px solid $textColor;
 }
 
 //contact form

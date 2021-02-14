@@ -1,13 +1,8 @@
-.main-nav {
-    width: 100%;
-}
-
-.main-nav ul {
-    width: 100%;
+.nav-links {
     justify-content: flex-end;
 }
 
-.main-nav li a {
+.nav-links li a {
     padding: 25px;
 
     color: $textColor;
@@ -16,14 +11,81 @@
     line-height: 2.9rem;
     letter-spacing: 1px;
 
-    transition: all 0.2s;
+    @include transition;
 }
 
-.main-nav .nav-toggle {
+.nav-links li a:hover,
+.nav-links li a:focus  {
+    color: $lightShadow;
+}
+
+//burger menu and mobile navigation styles
+.burger {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    right: 20px;
+}
+
+.burger {
     display: none;
 }
 
-.main-nav li a:hover,
-.main-nav li a:focus  {
-    color: $lightShadow;
+.burger:hover div {
+    background-color: $lightShadow;
+}
+
+.burger div {
+    width: 35px;
+    height: 2px;
+    background-color: $textColor;
+    margin: 6px 0;
+    @include transition;
+}
+
+//add class of open on toggle with JS//
+/*rotate first bar */
+.open .bar1 {
+    transform: rotate(45deg)translate(8px, 9px);
+}
+/*hide middle bar*/
+.open .bar2 {
+    opacity: 0;
+}
+/*rotate third bar */
+.open .bar3 {
+    transform: rotate(-45deg) translate(2px, -3px);
+}
+
+.nav-links {
+        position: absolute;
+        z-index:-1;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        width: 100vw;
+        background-color: $darkBackground;
+        opacity: 98%;
+        flex-direction: column;
+        transform: translateY(-100%);
+        @include transition;
+    }
+
+//add this class on toggle with JS function
+.nav-open {
+    transform: translateY(0%); 
+    z-index: 10;
+}
+
+//animation for navigation links to come in
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        translateY: 50px;
+    }
+    to{
+        opacity: 1;
+        translateY: 0px;
+    }
 }
