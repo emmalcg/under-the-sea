@@ -659,8 +659,6 @@ img {
 
 .galleryItem {
   width: 31%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .nextButton,
@@ -705,6 +703,13 @@ img {
   left: 47%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.prevButton:hover,
+.nextButton:hover,
+.prevButton:focus,
+.nextButton:focus {
+  background-color: #189477;
 }
 
 .other-pages {
