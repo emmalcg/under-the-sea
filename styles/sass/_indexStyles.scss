@@ -263,7 +263,6 @@
 
 .galleryItem {
     width: 31%;
-    @include transition;
 }
 
 //buttons for the gallery slideshow @ max width 700px
@@ -306,4 +305,11 @@
 .nextButton::after {
     left: 47%;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.prevButton:hover,
+.nextButton:hover,
+.prevButton:focus,
+.nextButton:focus {
+    background-color: $contactFormHover;
 }
