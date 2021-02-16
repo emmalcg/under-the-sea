@@ -7,7 +7,7 @@ commentForm.addEventListener('submit', function(event) {
     // get the user's input from the input elements
     const nameInputValue = event.currentTarget.userName.value;
 
-    //the 
+    //get the input elements 
     const nameInputEl = document.querySelector('#userName');
     const emailInputEl = document.querySelector('#userEmail');
     const commentInputEl = document.querySelector('#userComment');

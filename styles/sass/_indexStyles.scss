@@ -252,17 +252,58 @@
 
 .gallery {
     background-color: $lightBackground;
+    position: relative;
 }
 
 .gallery .wrapper {
     display: flex;
+    justify-content: space-between;
     padding: 50px 0;
 }
 
-.gallery-item {
-    margin-right: 30px;
+.galleryItem {
+    width: 31%;
+    @include transition;
 }
 
-.gallery-item:last-child {
-    margin: 0;
+//buttons for the gallery slideshow @ max width 700px
+.nextButton,
+.prevButton {
+    position: absolute;
+    top: 50%;
+    width: 7vw;
+    height: 7vw;
+    background-color: rgba(255,255,255, 0.2);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid $darkBackground;
+    display: none;
+}
+
+.prevButton {
+    left: 7px;
+}
+
+.nextButton {
+    right: 7px
+}
+
+.prevButton::after,
+.nextButton::after {
+    content: ' ';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid $darkBackground;
+    border-bottom: 2px solid $darkBackground;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.nextButton::after {
+    left: 47%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
