@@ -16,16 +16,12 @@ const images = document.querySelector('.carousel');
 const nextButton = document.querySelector('.nextButton');
 const prevButton = document.querySelector('.prevButton');
 
-console.log(images);
-console.log(nextButton);
-console.log(prevButton);
+
 
 function startSlider() {
     current = imageEl.querySelector('.current');
     prev = current.previousElementSibling || images.lastElementChild;
-    console.log(prev);
     next = current.nextElementSibling || images.firstElementChild;
-    console.log({current, prev, next});
 }
 
 //function to apply new classes
@@ -37,7 +33,7 @@ function applyClasses() {
 
 //remove the classes when next/prev button is clicked
 function move(direction) {
-    //first strip all the classes off the current slides
+    //first strip all the classes off the current images
     const classesToRemove = ['prev', 'current', 'next'];
     prev.classList.remove(...classesToRemove);
     current.classList.remove(...classesToRemove);
@@ -60,14 +56,27 @@ function move(direction) {
 }
 //when this slider is created, run the start slider function
 startSlider();
-applyClasses();
+
 
 
 //event listeners
     prevButton.addEventListener('click', () => move('back'));
     nextButton.addEventListener('click', move)
+    
+    document.addEventListener('keyup', function(event) {
+        //if the key being pressed is ArrowLeft run 
+        if (event.key === 'ArrowLeft') {
+            move('back');
+        } else { //if key is ArrowRight
+            if (event.key === 'ArrowRight') {
+                move();
+            }
+        }
+    })
 }
 
 
+
 const mySlider = Slider(document.querySelector('.gallery'));
+
 
